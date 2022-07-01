@@ -1,5 +1,3 @@
-import pathlib
-import time
 from datetime import datetime as dt
 from tkinter import *
 from tkinter import filedialog as fd
