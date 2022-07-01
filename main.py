@@ -2,8 +2,10 @@ import json
 import os
 import shutil
 import sys
+from datetime import datetime as dt
 from pathlib import Path
 from tkinter import *
+from tkinter import filedialog as fd
 from tkinter import messagebox as ms
 
 from rich.console import Console
@@ -100,6 +102,7 @@ def openproject():
         def ok():
             # print("----------------")
             project = f'{b[ "project" ][ f"{a[ 0 ]}" ][ "path" ]}/{b[ "project" ][ f"{a[ 0 ]}" ][ "name" ]}'
+            print(project)
             if var[ "vsCode" ].get():
                 os.system( f"code {project}" )
             if var[ "pyCharm" ].get():
@@ -123,6 +126,29 @@ def openproject():
 
     root.mainloop()
 
+def loadFinishProject():
+    pathProject = fd.askdirectory()
+
+    path = Path( 'result.json' )
+    b = json.loads( path.read_text( encoding='utf-8' ) )
+    b["names"][[(a := pathProject.split("/"))[len(a)-1]][0]] = f"{ len( b[ 'project' ] ) }"
+
+
+    prpath = pathProject.split("/")
+    prpath = prpath[:len(prpath)-1]
+    prpath = "/".join(prpath)
+    print(prpath)
+
+    # print(prpath, type(prpath), len(prpath))
+
+    b["project"][f"{len(b['project'])}"] = {
+            'name': [(a := pathProject.split("/"))[len(a)-1]][0],
+            "path": prpath,
+            "data_create": str(dt.now()).split(" ")[0]
+        }
+    path.write_text(json.dumps(b, indent=4), encoding='utf-8')
+
+
 
 img = PhotoImage( file="refresh.png" )
 img_trash = PhotoImage( file="trash_bin_icon-icons.com_67981.png" )
@@ -130,6 +156,8 @@ update_btn = Button( image=img, command=update )
 delete_btn = Button( image=img_trash, command=delete )
 open_btn = Button( text="Открыть", height=2, width=12, relief=RAISED,
     command=openproject )
+loadfinishproject_btn = Button( text="Загрузить", height=2, width=12, relief=RAISED,
+    command=loadFinishProject )
 
 try:
     path = Path( 'result.json' )
@@ -150,5 +178,7 @@ create_btn.place( x=300, y=5 )
 update_btn.place( x=200, y=5 )
 delete_btn.place( x=365, y=265 )
 open_btn.place( x=300, y=50 )
+loadfinishproject_btn.place( x=300, y=100 )
+
 
 root.mainloop()
