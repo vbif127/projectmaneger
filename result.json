@@ -1,8 +1,72 @@
 {
     "names": {
-
+        "babatanya": "0",
+        "craft albion": "1",
+        "metods": "2",
+        "gen_project_v2": "3",
+        "\u043aa\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440 \u0436\u0438\u0437\u043d\u0438": "4",
+        "Django and Flask": "5",
+        "run": "6",
+        "projectmaneger": "7",
+        "game_and_test": "8",
+        "v5": "9",
+        "": "11"
     },
     "project": {
-
+        "0": {
+            "name": "babatanya",
+            "path": "D:/\u043f\u0438\u0442\u043e\u043d",
+            "data_create": "2022-07-01"
+        },
+        "1": {
+            "name": "craft albion",
+            "path": "D:/\u043f\u0438\u0442\u043e\u043d",
+            "data_create": "2022-07-01"
+        },
+        "2": {
+            "name": "metods",
+            "path": "D:/\u043f\u0438\u0442\u043e\u043d",
+            "data_create": "2022-07-01"
+        },
+        "3": {
+            "name": "gen_project_v2",
+            "path": "D:/\u043f\u0438\u0442\u043e\u043d",
+            "data_create": "2022-07-01"
+        },
+        "4": {
+            "name": "\u043aa\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440 \u0436\u0438\u0437\u043d\u0438",
+            "path": "D:/\u043f\u0438\u0442\u043e\u043d",
+            "data_create": "2022-07-01"
+        },
+        "5": {
+            "name": "Django and Flask",
+            "path": "D:/\u043f\u0438\u0442\u043e\u043d",
+            "data_create": "2022-07-01"
+        },
+        "6": {
+            "name": "run",
+            "path": "C:/Users/mihac",
+            "data_create": "2022-07-01"
+        },
+        "7": {
+            "name": "projectmaneger",
+            "path": "C:/Users/mihac",
+            "data_create": "2022-07-01"
+        },
+        "8": {
+            "name": "game_and_test",
+            "path": "D:/\u043f\u0438\u0442\u043e\u043d",
+            "data_create": "2022-07-01"
+        },
+        "9": {
+            "name": "v5",
+            "path": "D:/\u043f\u0438\u0442\u043e\u043d/poker/carta2/config/final/poker_Bot",
+            "data_create": "2022-07-01"
+        },
+        "11": {
+            "name": "",
+            "path": "",
+            "data_create": "2022-07-01"
+        }
     }
 }

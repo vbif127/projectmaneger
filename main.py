@@ -108,7 +108,7 @@ def openproject():
             if var[ "pyCharm" ].get():
                 os.system( f"pycharm {project}" )
             if var[ "explorer" ].get():
-                os.system( f"files {project}" )
+                os.system( f"start {project}" )
             root.destroy()
 
         btn = Button( root, text="Ok", font=font, width=10, command=ok )
